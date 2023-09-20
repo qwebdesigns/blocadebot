@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'bb';
-    src: url('./arnamu.ttf');
+    src: url('../assets/arnamu.ttf');
 }
 [hidden]{
     display: none;
@@ -107,7 +107,7 @@ body {
 .zone1 {
     width: 100%;
     height: 100vh;
-    background-color: blue;
+    background-color: #181414;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -132,13 +132,37 @@ body {
     width: 50%;
     height: 100vh;
     z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
 }
 
 
+.head_head{
+    width: 55%;
+    animation: infinite HeadTranslate 7s ease-in-out;
+    user-select: none;
+    filter: drop-shadow(0px 0px 10px #00000099);
+    transition: filter 1s ease-in-out;
+}
 
-
-
-
+@keyframes HeadTranslate{
+    0%{
+        transform: translateY(2vh);
+    }
+    50%{
+        transform: translateY(-4vh);
+    }
+    100%{
+        transform: translateY(2vh);
+    }
+}
+.head_head:hover{
+    filter: drop-shadow(0px 0px 3px #00dbdb74);
+}
 
 
 
@@ -322,7 +346,7 @@ body {
     /*transform: translate(-50%, -50%);*/
     background: #181414fc;
     box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    box-shadow: 0 15px 25px #00000099;
     border-radius: 10px;
 }
 
